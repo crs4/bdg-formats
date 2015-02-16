@@ -252,6 +252,12 @@ record AlignmentRecord {
   union { null, Contig } mateContig = null;
 }
 
+record AlignmentRecordPair {
+  union { null, string } readName = null;
+  union { null, AlignmentRecord } read = null;
+  union { null, AlignmentRecord } mate = null;
+}
+
 /**
  Enumeration for DNA/RNA bases. For codes outside of ACTGU, see the IUPAC 
  resolution codes (http://www.bioinformatics.org/sms/iupac.html).
